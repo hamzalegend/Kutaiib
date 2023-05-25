@@ -1,7 +1,15 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .serializers import ItemSerializer
+from .models import *
 # Create your views here.
 
 
-def index(response):
-    return render(response, "home.html", {})
+class ItemView(generics.ListAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
+
+
+# @api_view(["Get"])
+# def index(response):
+#     Book.objects
+#     return Response()

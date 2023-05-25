@@ -1,2 +1,15 @@
 {% extends "base.html" %}
 
+{% block body %}
+    <table>
+        
+        {% for b in books.all %}
+            <tr>
+                <th><h1>{{b.id}}- </h1> </th>
+                <th><h1>{{b.name}}</h1> </th>
+                <th><h1>{{b.author}}</h1> </th>
+                <th><h1>{{b.price}}</h1> </th>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
