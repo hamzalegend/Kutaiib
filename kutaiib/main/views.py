@@ -7,9 +7,3 @@ from .models import *
 class ItemView(generics.ListAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
-
-
-# @api_view(["Get"])
-# def index(response):
-#     Book.objects
-#     return Response()

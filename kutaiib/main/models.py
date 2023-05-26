@@ -15,3 +15,14 @@ class Item(models.Model):
 class Book(Item):
     author = models.CharField(max_length=50)
     numOfPages = models.IntegerField()
+
+
+class BookMark(Item):
+    pass
+
+
+# ============================================================================
+# ============================================================================
+# ============================================================================
+orders = []
+restocks = []
