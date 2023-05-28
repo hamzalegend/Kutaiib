@@ -2,7 +2,7 @@ import "../App.css";
 import ItemListing from "./components/ItemListing";
 import Navbar from "./components/Navbar";
 
-function Library(props) {
+function LibraryPage(props) {
   return (
     <>
       <Navbar />
@@ -18,4 +18,4 @@ function Library(props) {
   );
 }
 
-export default Library;
+export default LibraryPage;
