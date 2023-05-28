@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import HomePage from "./pages/home";
-import LibraryPage from "./pages/library";
-import AboutUsPage from "./pages/AboutUs";
 import CatigoriesPage from "./pages/catigories";
+import LibraryPage from "./pages/library";
 import BookmarksPage from "./pages/bookmarks";
+import AboutUsPage from "./pages/AboutUs";
 
 function App() {
   const [Data, setData] = useState([]);
@@ -17,7 +17,7 @@ function App() {
   }, []);
 
   let getData = async () => {
-    let response = await fetch("http://127.0.0.1:8000/");
+    let response = await fetch("http://127.0.0.1:8000/api/");
     let data = await response.json();
     setData(data);
   };
