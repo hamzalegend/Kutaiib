@@ -1,18 +1,20 @@
 import "../App.css";
-import ItemListing from "./components/ItemListing";
-import Navbar from "./components/Navbar";
 
-function LibraryPage(props) {
+import GetApiData from "../API/API";
+
+import Navbar from "./components/Navbar";
+import ItemListing from "./components/ItemListing";
+
+function LibraryPage() {
+  let Data = GetApiData("books");
   return (
     <>
       <Navbar />
       <div className="library">
-        <h1>Books</h1>
-        <h3>id - Item.name Item.ogPrice - Item.price</h3>
-
-        {props.data.map((Item, id) => (
+        {Data.map((Item, id) => (
           <ItemListing key={id} Item={Item} />
         ))}
+        {console.log("Data")};{console.log(Data)};
       </div>
     </>
   );
