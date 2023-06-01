@@ -24,30 +24,28 @@
     
     margin: 0;
     text-align: right;
-
-    /* float: right; */
-
     
 }
 .itempage-card-wraper .card-title{
     margin: 1rem;
     font-size: 4.5rem;
-    
 }
 
 .discription{
     margin-bottom: 2.5rem;
 }
 .itempage-card-wraper .addtocart{
-    /* background-color: red; */
     height: 10rem;
-    font-size: 2rem;
-    
+    width: 50%;
+
     margin-top: 2rem; 
+
+    font-size: 2rem;
+
+    display: inline-block;
 }
 
 .itempage-card-wraper .price{
-    /* float: right; */
     margin: 0;
 
 }
@@ -59,9 +57,11 @@
 
 .itempage-card-wraper .addtocartbtn
 {
-    /* display: block; */
     margin: 0;
-    /* width: 100rem; */
-    /* background-color: brown; */
+}
 
+
+.author{
+    /* display: inline-block; */
+    /* width: 100rem; */
 }

@@ -22,6 +22,10 @@ class BooksView(generics.ListAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
+class AuthorsView(generics.ListAPIView):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerializer
+
 
 class BookMarkView(generics.ListAPIView):
     queryset = BookMark.objects.all()
@@ -44,9 +48,6 @@ class ItemView(APIView):
     
 
 class BookView(APIView):
-    # add permission to check if user is authenticated
-    # permission_classes = [permissions.IsAuthenticated]
-
     def get(self, request, id, *args, **kwargs):
     
         book = Book.objects.get(id = id)
@@ -57,4 +58,17 @@ class BookView(APIView):
             )
 
         serializer = BookSerializer(book)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class AuthorView(APIView):
+    def get(self, request, id, *args, **kwargs):
+    
+        author = Author.objects.get(id = id)
+        if not author:
+            return Response(
+                {"res": "Object with Author id does not exists"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        serializer = AuthorSerializer(author)
         return Response(serializer.data, status=status.HTTP_200_OK)

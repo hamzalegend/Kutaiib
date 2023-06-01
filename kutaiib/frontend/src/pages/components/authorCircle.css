@@ -1,0 +1,16 @@
+.imgframe {
+    display: inline-block;
+    width: 15rem;
+    margin: 0
+    ;
+}
+
+.imgframe img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+.authorName{
+    display: inline;
+}

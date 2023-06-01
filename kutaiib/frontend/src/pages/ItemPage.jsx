@@ -5,25 +5,28 @@ import { useParams } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import "./Itempage.css";
+import AuthorCircle from "./components/authorCircle";
 
 function ItemPage({ match, history }) {
-  let { id } = useParams("id");
+  var { id } = useParams("id");
+  // const [Book, setBook] = useState([]);
+  // const [Author, setAuthor] = useState([]);\
 
-  let data = GetApiData("Book/" + id);
+  const [Quantity, setQuantity] = useState([1]);
 
-  const [Quantity, setQuantity] = useState([0]);
+  var Book;
+  // useEffect(() => {
+  //   setTimeout(() => {}, 1000);
+  // });
+  Book = GetApiData("Book/" + id);
   return (
     <>
       <Navbar />
 
-      {console.log("retrieving from /api/Book/" + id)}
-      {console.log(data)}
-      {data.authorID}
-
       <div className="itempage-card-wraper ">
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">{data.name}</h5>
+            <h5 className="card-title">{Book?.name}</h5>
 
             <p className="card-text discription">
               {/* {data.discription} */}
@@ -35,8 +38,11 @@ function ItemPage({ match, history }) {
               ullam fuga qui assumenda, rem eaque facilis consequatur illo nam
             </p>
             <hr />
+
+            <AuthorCircle className="author" authorID={Book?.authorID} />
+
             <div className="addtocart">
-              <p className="card-text price">{data.price}.00JD</p>
+              <p className="card-text price">{Book?.price}.00JD</p>
 
               <div
                 className="btn-group"
@@ -50,9 +56,9 @@ function ItemPage({ match, history }) {
                 >
                   -
                 </button>
-                <butto type="butto" className="btn btn-primary counter">
+                <button type="butto" className="btn btn-primary counter">
                   {Quantity}
-                </butto>
+                </button>
                 <button
                   type="button"
                   className="btn btn-primary"
@@ -68,7 +74,12 @@ function ItemPage({ match, history }) {
             </div>
           </div>
 
-          <img src="/images/testbook.jpg" className="card-img-top" alt="..." />
+          <img
+            src={"/images/i" + Book?.id + ".jpeg"}
+            // src={"/images/i" + "1.jpeg"}
+            className="card-img-top"
+            alt="..."
+          />
         </div>
       </div>
     </>

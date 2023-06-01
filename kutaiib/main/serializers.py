@@ -19,3 +19,8 @@ class BookMarkSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookMark
         fields = ("id", "name", "price", "ogPrice")
+
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Author
+        fields = ("id", "name")

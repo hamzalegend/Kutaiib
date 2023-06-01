@@ -79,8 +79,8 @@ function Navbar(props) {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
+                  <a className="dropdown-item" href="/Authors">
+                    Our Authors
                   </a>
                 </li>
               </ul>
