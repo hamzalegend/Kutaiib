@@ -52,7 +52,7 @@ function ItemPage({ match, history }) {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  onClick={() => setQuantity(Number(Quantity - 1))}
+                  onClick={() => setQuantity(Number(Number(Quantity) - 1))}
                 >
                   -
                 </button>

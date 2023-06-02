@@ -2,32 +2,11 @@ import "./Navbar.css";
 
 function Navbar(props) {
   return (
-    // <div className="navbar">
-    //   {/* <h1>hello</h1> */}
-    //   <img
-    //     className="logo"
-    //     src={window.location.origin + "/images/logo512.png"}
-    //     alt="book img"
-    //   />
-
-    //   <div className="searchbar">
-    //     {/* <form action=""> */}
-    //     <img
-    //       className="searchicon"
-    //       src={window.location.origin + "/images/searchicon.png"}
-    //       alt=""
-    //     />
-    //     <input type="text" placeholder="Search.." />
-    //     {/* <button type="submit">search</button> */}
-    //     {/* </form> */}
-    //   </div>
-    // </div>
-
     <nav className="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/home">
           {/* Navbar */}
-          <img className="navbarlogo" src="/images/searchicon.png" alt="" />
+          <img className="navbarlogo" src="/images/logo2.jpeg" alt="" />
         </a>
         <button
           className="navbar-toggler"
@@ -44,17 +23,17 @@ function Navbar(props) {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/home">
-                Home
+                <p>Home</p>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/Catigories">
-                Catigories
+                <p>Catigories</p>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/about-us">
-                About Kutaiib
+                <p>About Kutaiib</p>
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -85,22 +64,25 @@ function Navbar(props) {
                 </li>
               </ul>
             </li>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
+            <form className="search" action="/search">
+              <input type="text" placeholder="Search" />
             </form>
           </ul>
         </div>
       </div>
     </nav>
 
+    /* <form className="d-flex" role="search">
+<input
+  className="form-control me-2"
+  type="search"
+  placeholder="Search"
+  aria-label="Search"
+/>
+<button className="btn btn-outline-success" type="submit">
+  Search
+</button>
+</form> */
     // <nav className="navbar bg-body-tertiary">
     //   <div className="container-fluid">
     //     <a className="navbar-brand">Navbar</a>

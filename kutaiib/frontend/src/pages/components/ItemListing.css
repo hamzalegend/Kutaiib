@@ -11,9 +11,6 @@ body{
 .card-img-top{
     width: 15rem;
     margin: 2rem;
-    
-    /* margin-right: auto; */
-    
 }
 
 .card{
@@ -21,7 +18,7 @@ body{
     width: 20rem;
     display: inline-block;
 
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    /* box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05); */
     /* padding: 14px 80px 18px 36px; */
     transition: .6s transform cubic-bezier(.155,1.105,.295,1.12),.6s box-shadow,.6s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     
@@ -31,12 +28,62 @@ body{
 card  :hover > .card{
     transition: .6s transform cubic-bezier(.155,1.105,.295,1.12),.6s box-shadow,.6s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    /* box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06); */
 }
 
 @media(max-width: 990px){
     .card{
       margin: 20px;
     }
-  } 
+} 
+.card-body{
+    margin: 0;
+    padding: 0;
+}
+
+.price{
+    display: inline-block;
+    width: 70%;
+    /* height: 3.5rem; */
+    /* background-color: blue; */
+    /* border-left-style: solid;
+    border-left-color: rgb(131, 131, 131);
+    border-left-width: 0.02rem;
+
+    border-top-style: solid;
+    border-top-color: rgb(131, 131, 131);
+    border-top-width: 0.01rem; */
+    vertical-align: middle;
+    margin: 5% 0;
+    
+    
+
+    
+}
+
+.cartbtn{
+    width: 30%;
+    height: 3.5rem;
+
+    float: left;
+
+    border-radius: 0;
+     
+    /* background-color: #522c03; */
+
+    /* border-top-style: solid;
+    border-top-color: rgb(131, 131, 131);
+    border-top-width: 0.02rem; */
+    
+    
+    
+}
+.addtocartform :hover{
+    background-color: #522c03;
+}
+
+
+.cartbtn img{
+    max-height: 2rem;
+}
 
