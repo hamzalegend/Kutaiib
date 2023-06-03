@@ -54,9 +54,20 @@
     display: block;
 }
 
+.itempage-card-wraper .btn-group .btn{
+    background-color: #522c03;    
+    color: #fff;
+}
+
+.itempage-card-wraper .btn-group .btn :disabled{
+    border-color: #522c03;
+}
+
 
 .itempage-card-wraper .addtocartbtn
 {
+    background-color: #522c03;    
+    color: #fff;
     margin: 0;
 }
 

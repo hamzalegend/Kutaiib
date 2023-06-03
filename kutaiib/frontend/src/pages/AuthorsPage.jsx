@@ -12,11 +12,10 @@ function AuthorsPage(props) {
 
       {Data.map((author, id) => (
         <>
-          <AuthorCircle authorID={id} />
+          <AuthorCircle key={id} authorID={id + 1} />
           <h1></h1>
         </>
       ))}
-      {console.log(Data)}
     </>
   );
 }

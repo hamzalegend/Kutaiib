@@ -17,6 +17,15 @@
     font-size: 1.5em;
 }
 
+.navbar a{
+    
+    
+    
+}
+.navbar a :hover{
+    
+}
+
 .nav-link{
     margin: 0 1rem;
 }
@@ -45,3 +54,17 @@
       
     
     } */
+.carticon{
+    margin-left: 20rem;
+}
+.carticon img{
+    display: inline;
+
+    width: 4rem;
+}
+
+.carticon h2{
+    display: inline;
+    color: #fff;
+    margin: 1rem;
+}

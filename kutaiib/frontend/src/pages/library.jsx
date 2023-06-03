@@ -14,7 +14,6 @@ function LibraryPage() {
         {Data.map((Item, id) => (
           <ItemListing key={id} Item={Item} />
         ))}
-        {console.log("Data")};{console.log(Data)};
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+import Cart from "../../API/cart";
 import "./Navbar.css";
 
 function Navbar(props) {
@@ -64,9 +65,20 @@ function Navbar(props) {
                 </li>
               </ul>
             </li>
-            <form className="search" action="/search">
-              <input type="text" placeholder="Search" />
-            </form>
+
+            <li>
+              <form className="search" action="/search">
+                <input type="text" placeholder="Search" />
+              </form>
+            </li>
+
+            <li className="carticon">
+              <a href="/cart">
+                <img src="/images/shopping-cart.png" alt="" />
+                <h2>{Cart.Count()}</h2>
+              </a>
+              <button onClick={() => Cart.Clear()}>clear</button>
+            </li>
           </ul>
         </div>
       </div>

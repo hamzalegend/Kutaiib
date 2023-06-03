@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 
 import "./Itempage.css";
 import AuthorCircle from "./components/authorCircle";
+import Cart from "../API/cart";
 
 function ItemPage({ match, history }) {
   var { id } = useParams("id");
@@ -13,12 +14,14 @@ function ItemPage({ match, history }) {
   // const [Author, setAuthor] = useState([]);\
 
   const [Quantity, setQuantity] = useState([1]);
+  // setQuantity(1);
 
-  var Book;
+  var Item;
   // useEffect(() => {
   //   setTimeout(() => {}, 1000);
   // });
-  Book = GetApiData("Book/" + id);
+  Item = GetApiData("Book/" + id);
+
   return (
     <>
       <Navbar />
@@ -26,7 +29,7 @@ function ItemPage({ match, history }) {
       <div className="itempage-card-wraper ">
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">{Book?.name}</h5>
+            <h5 className="card-title">{Item?.name}</h5>
 
             <p className="card-text discription">
               {/* {data.discription} */}
@@ -39,10 +42,10 @@ function ItemPage({ match, history }) {
             </p>
             <hr />
 
-            <AuthorCircle className="author" authorID={Book?.authorID} />
+            <AuthorCircle className="author" authorID={Item?.authorID} />
 
             <div className="addtocart">
-              <p className="card-text price">{Book?.price}.00JD</p>
+              <p className="card-text price">{Item?.price}.00JD</p>
 
               <div
                 className="btn-group"
@@ -51,31 +54,38 @@ function ItemPage({ match, history }) {
               >
                 <button
                   type="button"
-                  className="btn btn-primary"
-                  onClick={() => setQuantity(Number(Number(Quantity) - 1))}
+                  className="btn"
+                  onClick={() => setQuantity(Number(Quantity) - 1)}
+                  disabled={Quantity <= 1}
                 >
                   -
                 </button>
-                <button type="butto" className="btn btn-primary counter">
+                <button type="button" className="btn  counter">
                   {Quantity}
                 </button>
                 <button
                   type="button"
-                  className="btn btn-primary"
-                  onClick={() => setQuantity(Number(Quantity + 1))}
+                  className="btn"
+                  onClick={() => setQuantity(Number(Quantity) + 1)}
                 >
                   +
                 </button>
               </div>
 
-              <a href="#" className="btn btn-primary addtocartbtn">
+              <button
+                href="#"
+                className="btn addtocartbtn"
+                onClick={() => {
+                  Cart.addToCart(Item.id, Quantity);
+                }}
+              >
                 Add to Cart
-              </a>
+              </button>
             </div>
           </div>
 
           <img
-            src={"/images/i" + Book?.id + ".jpeg"}
+            src={"/images/i" + Item?.id + ".jpeg"}
             // src={"/images/i" + "1.jpeg"}
             className="card-img-top"
             alt="..."

@@ -10,7 +10,6 @@ function HomePage(props) {
       {Data.map((item, id) => (
         <ItemListing key={id} Item={item} />
       ))}
-      {console.log(Data)}
     </>
   );
 }
