@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/WebsiteTest/%60%60/static/css/main.5ec45b0d.css",
-    "main.js": "/WebsiteTest/%60%60/static/js/main.d5c85246.js",
-    "static/js/787.cda612ba.chunk.js": "/WebsiteTest/%60%60/static/js/787.cda612ba.chunk.js",
-    "index.html": "/WebsiteTest/%60%60/index.html",
-    "main.5ec45b0d.css.map": "/WebsiteTest/%60%60/static/css/main.5ec45b0d.css.map",
-    "main.d5c85246.js.map": "/WebsiteTest/%60%60/static/js/main.d5c85246.js.map",
-    "787.cda612ba.chunk.js.map": "/WebsiteTest/%60%60/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/Kutaiib/static/css/main.5ec45b0d.css",
+    "main.js": "/Kutaiib/static/js/main.e913a65f.js",
+    "static/js/787.cda612ba.chunk.js": "/Kutaiib/static/js/787.cda612ba.chunk.js",
+    "index.html": "/Kutaiib/index.html",
+    "main.5ec45b0d.css.map": "/Kutaiib/static/css/main.5ec45b0d.css.map",
+    "main.e913a65f.js.map": "/Kutaiib/static/js/main.e913a65f.js.map",
+    "787.cda612ba.chunk.js.map": "/Kutaiib/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ec45b0d.css",
-    "static/js/main.d5c85246.js"
+    "static/js/main.e913a65f.js"
   ]
 }
