@@ -17,10 +17,18 @@ function ItemPage({ match, history }) {
   // setQuantity(1);
 
   var Item;
+  var Book;
   // useEffect(() => {
   //   setTimeout(() => {}, 1000);
   // });
-  Item = GetApiData("Book/" + id);
+  Item = GetApiData("Item/" + id);
+
+  try {
+    Book = GetApiData("Book/" + id);
+    
+  }  catch(e) {
+
+  }
 
   return (
     <>
@@ -42,7 +50,7 @@ function ItemPage({ match, history }) {
             </p>
             <hr />
 
-            <AuthorCircle className="author" authorID={Item?.authorID} />
+            <AuthorCircle className="author" authorID={Book?.authorID} />
 
             <div className="addtocart">
               <p className="card-text price">{Item?.price}.00JD</p>
