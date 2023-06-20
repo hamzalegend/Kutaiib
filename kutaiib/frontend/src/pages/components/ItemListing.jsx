@@ -6,7 +6,7 @@ function ItemListing(props) {
       <a href={"/Item/" + props.Item.id}>
         <div className="card text-center">
           <img
-            src={process.env.PUBLIC_URL + "/images/i" + props.Item.id + ".jpeg"}
+            src={"/images/i" + props.Item.id + ".jpeg"}
             className="card-img-top"
             alt="..."
           />
@@ -14,7 +14,7 @@ function ItemListing(props) {
             <h5 className="card-title">{props.Item.name}</h5>
             <form className="addtocartform" action="/addtocart">
               <button type="button" className=" cartbtn btn ">
-                <img src={process.env.PUBLIC_URL + "/images/shopping-cart.png"} />
+                <img src="/images/shopping-cart.png" />
               </button>
             </form>
             <h5 className=" price">{props.Item.price}JD</h5>

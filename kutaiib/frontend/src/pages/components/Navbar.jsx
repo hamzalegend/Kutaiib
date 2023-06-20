@@ -7,7 +7,7 @@ function Navbar(props) {
       <div className="container-fluid">
         <a className="navbar-brand" href="/home">
           {/* Navbar */}
-          <img className="navbarlogo" src={process.env.PUBLIC_URL + "/images/logo2.jpeg"} alt="" />
+          <img className="navbarlogo" src="/images/logo2.jpeg" alt="" />
         </a>
         <button
           className="navbar-toggler"

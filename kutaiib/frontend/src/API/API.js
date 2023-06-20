@@ -8,7 +8,7 @@ let getData = async () => {
     let data;
     try
     {
-      response = await fetch("http://hamza2abdelal.pythonanywhere.com/api/" + url);
+      response = await fetch("http://127.0.0.1:8000/api/" + url);
       data = await response.json();
 
     }catch(e){};
