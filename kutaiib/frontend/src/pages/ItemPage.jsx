@@ -93,7 +93,7 @@ function ItemPage({ match, history }) {
           </div>
 
           <img
-            src={"/images/i" + Item?.id + ".jpeg"}
+            src={process.env.PUBLIC_URL + "/images/i" + Item?.id + ".jpeg"}
             // src={"/images/i" + "1.jpeg"}
             className="card-img-top"
             alt="..."
