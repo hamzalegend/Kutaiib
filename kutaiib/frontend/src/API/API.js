@@ -6,19 +6,26 @@ function GetApiData(url) {
 let getData = async () => {
     let response;
     let data;
+
+		console.log("yes");
     try
     {
-      response = await fetch("http://127.0.0.1:8000/api/" + url);
+      response = await fetch("http://hamza2abdelal.pythonanywhere.com/api/" + url);
       data = await response.json();
+      setData(data);
 
+		console.log(data);
+		
+		console.log("Asdsad");
     }catch(e){};
+		
+		console.log("[ERROR]");
+	};
 
-    setData(data);
-  };
-  return Data;
-}
-useEffect(() => {
-    getData();
-}, []);
+	useEffect(() => {
+		getData();
+	}, []);
 
+	return Data;
+};
 export default GetApiData;

@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 
 function HomePage(props) {
   let Data = GetApiData("");
+  
+  console.log(Data);
   return (
     <>
       <Navbar />

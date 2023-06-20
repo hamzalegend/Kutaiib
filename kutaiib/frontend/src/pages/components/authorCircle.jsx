@@ -8,7 +8,12 @@ function AuthorCircle(props) {
     <a href={"/author/" + props.authorID}>
       <div className="imgframe">
         <center>
-          <img src={"/images/a" + props.authorID + ".jpeg"} alt="ayman" />
+          <img
+            src={
+              process.env.PUBLIC_URL + "/images/a" + props.authorID + ".jpeg"
+            }
+            alt="ayman"
+          />
           <h5 className="authorName">{Author.name}</h5>
         </center>
       </div>

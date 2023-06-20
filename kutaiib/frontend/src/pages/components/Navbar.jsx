@@ -7,7 +7,11 @@ function Navbar(props) {
       <div className="container-fluid">
         <a className="navbar-brand" href="/home">
           {/* Navbar */}
-          <img className="navbarlogo" src="/images/logo2.jpeg" alt="" />
+          <img
+            className="navbarlogo"
+            src={process.env.PUBLIC_URL + "/images/logo2.jpeg"}
+            alt=""
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -74,7 +78,10 @@ function Navbar(props) {
 
             <li className="carticon">
               <a href="/cart">
-                <img src="/images/shopping-cart.png" alt="" />
+                <img
+                  src={process.env.PUBLIC_URL + "/images/shopping-cart.png"}
+                  alt=""
+                />
                 <h2>{Cart.Count()}</h2>
               </a>
               <button onClick={() => Cart.Clear()}>clear</button>
