@@ -3,11 +3,7 @@ import { useEffect, useState } from "react";
 function GetApiData(url) {
   const [Data, setData] = useState([]);
 
-  useEffect(() => {
-    getData();
-  }, []);
-
-  let getData = async () => {
+let getData = async () => {
     let response;
     let data;
     try
@@ -21,4 +17,8 @@ function GetApiData(url) {
   };
   return Data;
 }
+useEffect(() => {
+    getData();
+}, []);
+
 export default GetApiData;
