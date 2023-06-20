@@ -81,7 +81,7 @@ function ItemPage({ match, history }) {
                 href="#"
                 className="btn addtocartbtn"
                 onClick={() => {
-                  Cart.addToCart(Item.id, Quantity);
+                  Cart.addToCart(Item.id, Number(Quantity));
                 }}
               >
                 Add to Cart
